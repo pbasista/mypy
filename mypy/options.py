@@ -32,6 +32,7 @@ class Options:
         "strict_boolean",
         "no_implicit_optional",
         "strict_optional",
+        "skip",
     }
 
     OPTIONS_AFFECTING_CACHE = ((PER_MODULE_OPTIONS | {"quick_and_dirty", "platform"})
@@ -140,6 +141,7 @@ class Options:
         self.shadow_file = None  # type: Optional[Tuple[str, str]]
         self.show_column_numbers = False  # type: bool
         self.dump_graph = False
+        self.skip = False
 
     def __eq__(self, other: object) -> bool:
         return self.__class__ == other.__class__ and self.__dict__ == other.__dict__
