@@ -104,7 +104,7 @@ install_requires.append('typed-ast >= 1.0.4, < 1.1.0')
 if sys.version_info < (3, 5):
     install_requires.append('typing >= 3.5.3')
 
-setup(name='mypy',
+setup(name='kiwi-mypy',
       version=version,
       description=description,
       long_description=long_description,
