@@ -43,6 +43,7 @@ PER_MODULE_OPTIONS = {
     "mypyc",
     "no_implicit_optional",
     "show_none_errors",
+    "skip",
     "strict_optional",
     "strict_optional_whitelist",
     "warn_no_return",
@@ -207,6 +208,7 @@ class Options:
         self.shadow_file = None  # type: Optional[List[List[str]]]
         self.show_column_numbers = False  # type: bool
         self.dump_graph = False
+        self.skip = False
         self.dump_deps = False
         self.logical_deps = False
         # If True, partial types can't span a module top level and a function

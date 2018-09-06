@@ -1464,6 +1464,9 @@ class State:
         self.options = manager.options.clone_for_module(self.id)
         self._type_checker = None
         self.fine_grained_deps = {}
+        if self.options.skip:
+            raise ModuleNotFound
+
         if not path and source is None:
             assert id is not None
             try:
