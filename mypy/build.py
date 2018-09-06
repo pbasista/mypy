@@ -1563,6 +1563,10 @@ class State:
         self.id = id or '__main__'
         self.options = manager.options.clone_for_module(self.id)
         self._type_checker = None
+
+        if self.options.skip:
+            raise ModuleNotFound
+
         if not path and source is None:
             assert id is not None
             try:
